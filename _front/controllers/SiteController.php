@@ -50,6 +50,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        $this->layout='home';
         $model=new Content();
         $article=$model->findOne(['alias'=>'home']);
         return $this->render('index',['article'=>$article]);
