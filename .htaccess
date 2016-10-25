@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+</IfModule>
+ 
+<IfModule mod_rewrite.c>
+    # deal with admin first
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^admin/assets/(.*)$ _admin/web/assets/$1 [L]
+    RewriteRule ^admin/css/(.*)$ _admin/web/css/$1 [L]
+	RewriteRule ^admin/images/(.*)$ _admin/web/images/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/_admin/web/(assets|css|js)/
+    RewriteRule ^js/(.*)$ _admin/web/js/$1 [L]
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^.*$ _admin/web/index.php [L]
+
+    RewriteCond %{REQUEST_URI} ^/(assets|css|js|images)
+    RewriteRule ^assets/(.*)$ _front/web/assets/$1 [L]
+    RewriteRule ^css/(.*)$ _front/web/css/$1 [L]
+    RewriteRule ^js/(.*)$ _front/web/js/$1 [L]
+    RewriteRule ^images/(.*)$ _front/web/images/$1 [L]
+    RewriteRule ^(.*)$ _front/web/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/(_front|_admin)/web/(assets|css|js)/
+    RewriteCond %{REQUEST_URI} !index.php
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ _front/web/index.php
+</IfModule> 
