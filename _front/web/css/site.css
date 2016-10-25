@@ -1,8 +1,12 @@
 html,
 body {
     height: 100%;
+    background: url("images/fon.jpg");
 }
-
+.main{
+    width: 940px;
+    margin: auto;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -18,7 +22,16 @@ body {
 
 }
 .holder{width:1000px;  margin:0 auto;}
-.header{padding: 10px 0}
+.header{background: url('images/head1.jpg'); display: block; width: 940px; height: 550px;}
+.shadow{-webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
+}
+.page{
+    background: #ffcc99;
+    border: 1px solid #cc9966;
+
+}
 .logo{
     background-image: url('images/sprite.png');
     height: 64px;
@@ -32,6 +45,7 @@ body {
     display: flex;
     list-style: none;
     justify-content: space-around;
+    margin: 0;
 }
 .menu_item{
     width: 200px;

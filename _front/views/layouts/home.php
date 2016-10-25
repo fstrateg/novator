@@ -23,32 +23,25 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="header">
-    <div class="holder">
-        <a class="logo" href="/"></a>
+<div class="main">
+    <div class="header shadow">
+            <a class="logo" href="/"></a>
     </div>
-</div>
-<div class="header__bottom">
-    <div class="holder">
-        <?= cmenu::widget();?>
-    </div>
-</div>
-<div>
-    <div class="holder">
-        <div class="content">
-        <?= CModules::widget(['content'=>$content]) ?>
+    <div class="page shadow">
+        <div class="holder">
+            <?= cmenu::widget();?>
         </div>
+         <?= CModules::widget(['content'=>$content]) ?>
     </div>
+
+    <footer class="footer">
+        <div class="holder">
+            <p class="pull-left">&copy; НоваТОР <?= date('Y') ?></p>
+
+            <p class="pull-right"></p>
+        </div>
+    </footer>
 </div>
-
-<footer class="footer">
-    <div class="holder">
-        <p class="pull-left">&copy; НоваТОР <?= date('Y') ?></p>
-
-        <p class="pull-right"></p>
-    </div>
-</footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
