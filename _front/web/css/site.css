@@ -6,6 +6,7 @@ body {
 .main{
     width: 940px;
     margin: auto;
+    padding-bottom: 20px;
 }
 .wrap {
     min-height: 100%;
@@ -22,34 +23,82 @@ body {
 
 }
 .holder{width:1000px;  margin:0 auto;}
-.header{background: url('images/head1.jpg'); display: block; width: 940px; height: 550px;}
+.header{background: url('images/head1.jpg'); display: block; width: 940px; height: 510px;}
 .shadow{-webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
 }
-.page{
+.client{
     background: #ffcc99;
     border: 1px solid #cc9966;
 
 }
 .logo{
-    background-image: url('images/sprite.png');
-    height: 64px;
-    width: 115px;
+    background-image: url('images/logo.png');
+    height: 53px;
+    width: 298px;
     display: block;
+    float: right;
+    margin: 120px 25px 0 0;
+}
+#telik{
+    background: url('images/telik.png');
+    width: 580px;
+    height: 340px;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+#telik .ekran{
+    position: relative;
+    top: 14px;
+    left: 22px;
+    width: 535px;
+    background: #333;
+}
+.fotorama__nav__frame{
+    margin-top: -30px !important;
+    z-index: 99;
 }
 .header__bottom{
     background: #f8f8f8;
+}
+.menu{
+    position: relative;
+    left: -26px;
+    width: 991px;
+}
+.menuleft,.menuright{
+    float: left;
+    width: 25px;
+    height: 60px;
+    display: table-cell;
+    background-image: url('images/menu2.png');
+}
+.menuright{
+    background-position-x: -25px;
+}
+
+.menucenter{
+    background: url('images/menu.png') repeat-x;
+    height: 50px;
+    width: 940px;
+    float: left;
+    display: table-cell;
 }
 .menu ul{
     display: flex;
     list-style: none;
     justify-content: space-around;
+    text-transform: uppercase;
+    font-family: "Minion Pro","Times New Roman", Arial;
+    font-weight: bold;
     margin: 0;
+    color: #fff;
 }
 .menu_item{
-    width: 200px;
-    line-height: 40px;
+    width: 220px;
+    line-height: 50px;
     text-align: center;
 }
 .menu_item a{
@@ -58,20 +107,21 @@ body {
     padding: 16px;
 }
 .menu_item:hover, .menu_item_active{
-background: #8ac200;
-color: #fff;
-transition: ease-in-out .2s;
+    color: #cc9966;
+    text-decoration: underline;
+    transition: ease-in-out .2s;
 }
 .carousel {
     width: 600px;
     margin: auto;
 }
-.content{
-    padding: 10px 0;
+article{
+    padding: 10px 10px;
     text-align: justify;
 }
 .footer{
-    background: url("images/bg6.jpg");
-    min-height: 50px;
+    background: url("images/footer.jpg");
+    min-height: 87px;
     padding: 10px 0;
+    margin-top: 20px;
 }

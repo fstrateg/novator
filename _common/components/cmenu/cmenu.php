@@ -12,7 +12,7 @@ class cmenu extends Widget
     {
         parent::init();
         ob_start();
-        echo '<div class="menu">';
+        echo '<div class="menu"><div class="menuleft"></div><div class="menucenter">';
     }
 
     public function run()
@@ -28,7 +28,7 @@ class cmenu extends Widget
             <li class="<?=$class?>"><a href="<?= $i->url ?>"><span><?= $i->title ?></span></a></li>
             <?
         }
-        echo '</ul></div>';
+        echo '</ul></div><div class="menuright"></div></div>';
         $content = ob_get_clean();
         return $content;
     }

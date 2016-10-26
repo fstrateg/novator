@@ -7,9 +7,12 @@ use yii\helpers\Html;
 use _front\assets\AppAsset;
 use _common\components\cmenu\cmenu;
 use _common\components\CModules\CModules;
-use yii\bootstrap\Carousel;
+use _common\components\cPhotoGallery\CPhotoGallery;
 
 AppAsset::register($this);
+$params=new stdClass();
+$params->dir='/images/slider/';
+$params->sliderparams="data-autoplay='true'  data-width='535' data-height='300' data-ratio='564/200' data-arrows='false' nav='false'";
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -26,21 +29,22 @@ AppAsset::register($this);
 <div class="main">
     <div class="header shadow">
             <a class="logo" href="/"></a>
+            <div id="telik">
+                <div class="ekran">
+                    <?= CPhotoGallery::widget(['params'=>$params]); ?>
+                </div>
+            </div>
     </div>
-    <div class="page shadow">
-        <div class="holder">
+
+    <div class="client shadow">
             <?= cmenu::widget();?>
-        </div>
-         <?= CModules::widget(['content'=>$content]) ?>
+            <article>
+                <?= CModules::widget(['content'=>$content]) ?>
+            </article>
+        <footer class="footer">
+        </footer>
     </div>
 
-    <footer class="footer">
-        <div class="holder">
-            <p class="pull-left">&copy; НоваТОР <?= date('Y') ?></p>
-
-            <p class="pull-right"></p>
-        </div>
-    </footer>
 </div>
 <?php $this->endBody() ?>
 </body>
