@@ -8,6 +8,10 @@ body {
     margin: auto;
     padding-bottom: 20px;
 }
+.page {
+    padding: 20px;
+    margin-top: 60px;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -24,6 +28,7 @@ body {
 }
 .holder{width:1000px;  margin:0 auto;}
 .header{background: url('images/head1.jpg'); display: block; width: 940px; height: 510px;}
+.headpage{background: url('images/head1.jpg'); display: block; width: 940px; height: 120px;}
 .shadow{-webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.75);
@@ -41,6 +46,14 @@ body {
     float: right;
     margin: 120px 25px 0 0;
 }
+.logopage{
+    background-image: url('images/logo.png');
+    height: 53px;
+    width: 298px;
+    display: block;
+    margin: 36px;
+    position: absolute;
+}
 #telik{
     background: url('images/telik.png');
     width: 580px;
@@ -56,7 +69,7 @@ body {
     width: 535px;
     background: #333;
 }
-.fotorama__nav__frame{
+#telik .fotorama__nav__frame{
     margin-top: -30px !important;
     z-index: 99;
 }
@@ -66,6 +79,7 @@ body {
 .menu{
     position: relative;
     left: -26px;
+    top: -1px;
     width: 991px;
 }
 .menuleft,.menuright{
@@ -94,10 +108,10 @@ body {
     font-family: "Minion Pro","Times New Roman", Arial;
     font-weight: bold;
     margin: 0;
+    padding: 0;
     color: #fff;
 }
 .menu_item{
-    width: 220px;
     line-height: 50px;
     text-align: center;
 }

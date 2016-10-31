@@ -8,8 +8,10 @@ use _front\assets\AppAsset;
 use _common\components\cmenu\cmenu;
 use _common\components\CModules\CModules;
 use _common\components\cPhotoGallery\CPhotoGallery;
+use _common\components\cPhotoGallery\CPhotoGalleryAssets;
 
 AppAsset::register($this);
+CPhotoGalleryAssets::register($this);
 $params=new stdClass();
 $params->dir='/images/slider/';
 $params->sliderparams="data-autoplay='true'  data-width='535' data-height='300' data-ratio='564/200' data-arrows='false' nav='false'";
