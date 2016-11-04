@@ -7,8 +7,8 @@ use yii\helpers\Html;
 use _front\assets\AppAsset;
 use _common\components\cmenu\cmenu;
 use _common\components\CModules\CModules;
-use _common\components\cPhotoGallery\CPhotoGallery;
-use _common\components\cPhotoGallery\CPhotoGalleryAssets;
+use _common\components\CPhotoGallery\CPhotoGallery;
+use _common\components\CPhotoGallery\CPhotoGalleryAssets;
 
 AppAsset::register($this);
 CPhotoGalleryAssets::register($this);
