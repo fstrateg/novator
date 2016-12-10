@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use _front\assets\AppAsset;
 use _common\components\cmenu\cmenu;
 use _common\components\CModules\CModules;
-use yii\bootstrap\Carousel;
+use _common\components\csimplehtml\csimplehtml;
 
 AppAsset::register($this);
 ?>
@@ -38,6 +38,7 @@ AppAsset::register($this);
     </div>
 
 </div>
+<?= csimplehtml::widget(['position'=>'footer']); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

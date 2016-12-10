@@ -9,6 +9,7 @@ use _common\components\cmenu\cmenu;
 use _common\components\CModules\CModules;
 use _common\components\CPhotoGallery\CPhotoGallery;
 use _common\components\CPhotoGallery\CPhotoGalleryAssets;
+use _common\components\csimplehtml\csimplehtml;
 
 AppAsset::register($this);
 CPhotoGalleryAssets::register($this);
@@ -48,6 +49,7 @@ $params->sliderparams="data-autoplay='true'  data-width='535' data-height='300' 
     </div>
 
 </div>
+<?= csimplehtml::widget(['position'=>'footer']); ?>
 <?php $this->endBody() ?>
 </body>
 </html>
